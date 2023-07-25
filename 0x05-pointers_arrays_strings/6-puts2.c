@@ -7,11 +7,10 @@
  */
 void puts2(char *str)
 {
-	int lingi = 0;
+	int longi = 0;
 	int t = 0;
 	char *y = str;
-
-	int 0;
+	int o;
 
 	while (*y != '\0')
 	{
