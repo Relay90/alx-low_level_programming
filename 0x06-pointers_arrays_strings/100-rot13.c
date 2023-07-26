@@ -3,6 +3,7 @@
 /**
  * rot13 - function that encodes a string using rot13
  * @s: check string params
+ *
  * Return: *s
  */
 char *rot13(char *s)
