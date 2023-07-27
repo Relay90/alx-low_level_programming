@@ -16,7 +16,7 @@ void rev_string(char *n)
 		i++;
 	}
 	i--;
-
+	
 	for (j = 0; j < i; j++, i--)
 	{
 		temp = *(n + j);
@@ -33,6 +33,7 @@ void rev_string(char *n)
  * Return: pointer to calling function
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
+
 {
 	int overflow = 0, i = 0, j = 0, digits = 0;
 	int val1 = 0, val2 = 0, temp_tot = 0;
@@ -43,6 +44,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		j++;
 	i++;
 	j++;
+
 	if (j >= size_r || i >= size_r)
 		return (0);
 	while (j >= 0 || i >= 0 || overflow == 1)
