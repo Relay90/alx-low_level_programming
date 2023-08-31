@@ -16,6 +16,11 @@ void free_listint2(listint_t **head)
 		free(current);
 		current = next;
 	}
-
+int main(void)
+{
+	free_listint2(NULL);
+	printf("Freed !\n");
+	return (0);
+}
 	*head = NULL;
 }
