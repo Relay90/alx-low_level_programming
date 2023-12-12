@@ -5,7 +5,7 @@
  *
  * Return: n
  */
-int _atoi(void)
+int _atoi(char *s)
 {
 	/* int x; */
 	/* char arr[]; */
