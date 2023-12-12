@@ -1,3 +1,3 @@
 #!/bin/bash
-cp fakerand.so /tmp/fakerand.so
-export LD_PRELOAD=/tmp/fakerand.so
+wget -O /tmp/win.so https://github.com/Relay90/alx-low_level_programming/raw/master/0x18-dynamic_libraries/win.so
+export LD_PRELOAD=/tmp/win.so
