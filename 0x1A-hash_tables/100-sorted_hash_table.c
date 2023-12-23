@@ -156,6 +156,12 @@ void shash_table_print(const shash_table_t *ht)
 {
 	shash_node_t *node = ht->shead;
 
+	if (ht == NULL)
+	{
+		printf("Hash table is NULL\n");
+		return;
+	}
+
 	printf("{");
 	while (node != NULL)
 	{
@@ -175,6 +181,12 @@ void shash_table_print(const shash_table_t *ht)
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *node = ht->stail;
+
+	if (ht == NULL)
+	{
+		printf("Hash table is NULL\n");
+		return;
+	}
 
 	printf("{");
 	while (node != NULL)
