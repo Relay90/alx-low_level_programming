@@ -1,50 +1,18 @@
-# Makefile for school executable
-
-# Define the compiler
 CC = gcc
-
-# Define the source files
-SRC = main.c school.c
-
-# Define the output executable
-NAME = school
-
-# Define the program to delete files
-RM = /bin/rm -f
-
-# Define compiler flags
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o)
+NAME = holberton
 CFLAGS = -Wall -Werror -Wextra -pedantic
+.PHONY: all clean oclean fclean re
+all: m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
-# Rule to build the executable
-all: $(NAME)
-
-# Rule to build the executable from source files
-$(NAME): $(SRC:%.c=%.o)
-	$(CC) $(CFLAGS) $^ -o $@
-
-# Rule to build .o files from source files
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Rule to clean Emacs and Vim temporary files along with the executable
 clean:
 	$(RM) *~ $(NAME)
 
-# Rule to delete the object files
 oclean:
-	$(RM) $(SRC:%.c=%.o)
+	$(RM) $(OBJ)
 
-# Rule to delete all Emacs and Vim temporary files, the executable, and the object files
 fclean: clean oclean
-	$(RM) $(NAME)
 
-# Rule to force recompilation of all source files
-re: fclean all
-
-# Ensure the header file m.h is present
-m.h:
-	@echo "Error: m.h is missing in the current directory."
-	@exit 1
-
-# Phony targets to avoid conflicts with files
-.PHONY: all clean oclean fclean re
+re: oclean all
