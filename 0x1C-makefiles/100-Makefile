@@ -8,8 +8,6 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
 clean:
 	$(RM) *~ $(NAME)
 oclean:
@@ -20,3 +18,4 @@ re: oclean all
 m.h:
 	@echo "Error: m.h is missing in the current directory."
 	@exit 1
+
